@@ -44,7 +44,7 @@ public class Cut {
             throw new IllegalArgumentException("-w or -c argument is required");
 
         if (!range.matches("^(\\d+-\\d+)|(\\d+-)|(\\|-\\d+)$")) {
-//надо воодить |-int для задования диапозона от начала строки, т.к. если написать -int это будет считаться флагом
+//надо воодить |-int для задания диапозона от начала строки, т.к. если написать -int это будет считаться флагом
             throw new IllegalArgumentException("Incorrect range argument use int-int, |-int or int-");
         }
 
