@@ -11,7 +11,7 @@ public class Cutter {
         this.end = end;
     }
 
-    public ArrayList<String> cutChars(List<String> lines) {
+    public List<String> cutChars(List<String> lines) {
         StringBuilder sb = new StringBuilder();
         ArrayList<String> result = new ArrayList<>();
         for (String line : lines) {
@@ -27,7 +27,7 @@ public class Cutter {
         return result;
     }
 
-    public ArrayList<String> cutWords(List<String> lines) {
+    public List<String> cutWords(List<String> lines) {
         StringBuilder sb = new StringBuilder();
         ArrayList<String> result = new ArrayList<>();
         for (String line : lines) {
