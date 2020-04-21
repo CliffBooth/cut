@@ -32,7 +32,6 @@ public class Cut {
 
     private void launch(String[] args) throws IOException {
         CmdLineParser parser = new CmdLineParser(this);
-
         try {
             parser.parseArgument(args);
         } catch (CmdLineException e) {
@@ -72,7 +71,7 @@ public class Cut {
 
         Cutter cutter = new Cutter(start, end);
         String line;
-        ArrayList<String> lines = new ArrayList<>();
+        List<String> lines = new ArrayList<>();
 
 
         if (inputName == null) {

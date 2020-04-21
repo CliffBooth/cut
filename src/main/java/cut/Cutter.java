@@ -1,6 +1,7 @@
 package cut;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cutter {
     private int start, end;
@@ -10,7 +11,7 @@ public class Cutter {
         this.end = end;
     }
 
-    public ArrayList<String> cutChars(ArrayList<String> lines) {
+    public ArrayList<String> cutChars(List<String> lines) {
         StringBuilder sb = new StringBuilder();
         ArrayList<String> result = new ArrayList<>();
         for (String line : lines) {
@@ -26,7 +27,7 @@ public class Cutter {
         return result;
     }
 
-    public ArrayList<String> cutWords(ArrayList<String> lines) {
+    public ArrayList<String> cutWords(List<String> lines) {
         StringBuilder sb = new StringBuilder();
         ArrayList<String> result = new ArrayList<>();
         for (String line : lines) {

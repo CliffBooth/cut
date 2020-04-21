@@ -12,6 +12,7 @@ class CutTest {
 
     private Path outputFile = Paths.get("temp.txt");
     private Path inputFile = Paths.get("src","test", "resources", "testFile.txt");
+    private Path emptyFile = Paths.get("src","test", "resources", "emptyFile.txt");
     private String ls = System.lineSeparator();
     private PrintStream err = System.err;
     private PrintStream out = System.out;
@@ -44,6 +45,9 @@ class CutTest {
         Cut.main(new String[]{"-w", "5-", inputFile.toString(), "-o", outputFile.toString()});
         assertFileContent(outputFile, "five six seven eight nine ten elven!" + ls + ls +
                 "is a test file...");
+
+        Cut.main(new String[]{"-w", "1-", emptyFile.toString(), "-o", outputFile.toString()});
+        assertFileContent(outputFile, "");
 
         new File(outputFile.toString()).delete();
     }
